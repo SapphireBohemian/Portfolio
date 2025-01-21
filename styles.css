@@ -187,21 +187,11 @@ footer button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  min-height: 400px; /* Ensure the container has some height */
-  text-align: center; /* Center-align text (optional) */
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
-/* Contact Form Styles */
-iframe {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-iframe:hover {
-  transform: scale(1.02);
-}
 
 /* Responsive Enhancements */
 @media (max-width: 768px) {
