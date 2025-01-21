@@ -182,6 +182,16 @@ footer button:hover {
   background: #005f99;
 }
 
+/* Centering Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 400px; /* Ensure the container has some height */
+  text-align: center; /* Center-align text (optional) */
+}
+
 /* Contact Form Styles */
 iframe {
   border-radius: 8px;
