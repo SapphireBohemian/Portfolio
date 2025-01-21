@@ -156,8 +156,10 @@
 
       fetch('https://formspree.io/f/mjkkndbl', {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors',
       })
+
       .then(response => {
         if (response.ok) {
           document.getElementById('confirmationMessage').style.display = 'block';
