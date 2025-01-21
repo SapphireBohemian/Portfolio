@@ -83,7 +83,11 @@ header a:hover {
 .hero h2 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #ffffff; /* Ensures the text is white */
+  font-weight: 700; /* Makes the text bolder */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow for better contrast */
 }
+
 
 .hero p {
   font-size: 1.2rem;
