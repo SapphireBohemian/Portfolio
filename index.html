@@ -29,54 +29,14 @@
   <section id="projects">
     <h2>My Projects</h2>
     <div class="project-list">
+      <!-- Projects as per your original content -->
       <article>
         <h3>KhumaloCraft Web</h3>
         <p>A web application for KhumaloCraft, developed in C#.</p>
         <p><strong>Technologies Used:</strong> C#, HTML, CSS</p>
         <a href="https://github.com/SapphireBohemian/KhumaloCraftWeb" target="_blank">View on GitHub</a>
       </article>
-      <article>
-        <h3>AgriEnergy Web App</h3>
-        <p>A web application for farmers to sell their goods, developed in C#.</p>
-        <p><strong>Technologies Used:</strong> C#, HTML, CSS</p>
-        <a href="https://github.com/SapphireBohemian/AgriEnergyWebApp" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>Bulletin Board Backend</h3>
-        <p>Backend for a bulletin board project, developed in JavaScript with MongoDB.</p>
-        <p><strong>Technologies Used:</strong> JavaScript, Node.js, MongoDB</p>
-        <a href="https://github.com/SapphireBohemian/BACKEND" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>Bulletin Board Front-End</h3>
-        <p>Frontend of the bulletin board app, connecting to the backend service via TypeScript and Angular.</p>
-        <p><strong>Technologies Used:</strong> TypeScript, Angular, MongoDB</p>
-        <a href="https://github.com/SapphireBohemian/This-is-a-front-end-project.-It-connects-with-my-backend-project-Typescript-was-used-in-developmen" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>ABCRetail Web App</h3>
-        <p>A web app for ABC Retail leveraging Azure services, developed in C#.</p>
-        <p><strong>Technologies Used:</strong> C#, Microsoft Azure</p>
-        <a href="https://github.com/SapphireBohemian/ABCRetailWebApp" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>Lecture Rating Backend</h3>
-        <p>Backend service for the Lecture Rating App, built using JavaScript, Node.js, and MongoDB.</p>
-        <p><strong>Technologies Used:</strong> JavaScript, Node.js, MongoDB</p>
-        <a href="https://github.com/SapphireBohemian/lecture-rating-backend" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>Lecture Rating App</h3>
-        <p>Frontend application for the Lecture Rating App, built with TypeScript and Ionic framework.</p>
-        <p><strong>Technologies Used:</strong> TypeScript, Ionic, SCSS, MongoDB</p>
-        <a href="https://github.com/SapphireBohemian/LectureRatingApp" target="_blank">View on GitHub</a>
-      </article>
-      <article>
-        <h3>Municipality Reporting App</h3>
-        <p>A reporting application for municipalities, developed in C#.</p>
-        <p><strong>Technologies Used:</strong> C#, SQL</p>
-        <a href="https://github.com/SapphireBohemian/MunicipalityReportingApp" target="_blank">View on GitHub</a>
-      </article>
+      <!-- Add other project articles here -->
     </div>
   </section>
 
@@ -89,57 +49,95 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Feel free to reach out to me via email at 
-      <a href="mailto:yntsalaze.yn@gmail.com">yntsalaze.yn@gmail.com</a> or connect with me on 
-      <a href="https://www.linkedin.com/in/yanga-ntsalaze-27b481191/" target="_blank">LinkedIn</a>.
-    </p>
-  </section>
+  <h2>Contact</h2>
+  <p>
+    Feel free to reach out to me via email at 
+    <a href="mailto:yntsalaze.yn@gmail.com">yntsalaze.yn@gmail.com</a> or connect with me on 
+    <a href="https://www.linkedin.com/in/yanga-ntsalaze-27b481191/" target="_blank">LinkedIn</a>.
+  </p>
+  <form id="contact-form">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="form-status"></p>
+</section>
+
 
   <footer>
     <p>© 2025 Yanga. All rights reserved.</p>
   </footer>
-</body>
-</html>
 
-<script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init(" Yanga Ntsalaze"); // Replace with your EmailJS user ID
+    })();
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
-  });
 
-  // Back to top button functionality
-  const backToTop = document.createElement('div');
-  backToTop.textContent = '↑';
-  backToTop.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: #007acc;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-  `;
-  document.body.appendChild(backToTop);
+    // Back to top button functionality
+    const backToTop = document.createElement('div');
+    backToTop.textContent = '↑';
+    backToTop.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #007acc;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    `;
+    document.body.appendChild(backToTop);
 
-  window.addEventListener('scroll', () => {
-    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
 
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Handle form submission with EmailJS
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const status = document.getElementById('form-status');
+      const form = event.target;
+
+      emailjs.sendForm('SapphireJSPrime', 'template_z89b6xm', form)
+        .then(() => {
+          status.textContent = "Your message has been sent successfully!";
+          status.style.color = "green";
+          form.reset();
+        }, () => {
+          status.textContent = "There was an error sending your message.";
+          status.style.color = "red";
+        });
+    });
+  </script>
+</body>
+</html>
