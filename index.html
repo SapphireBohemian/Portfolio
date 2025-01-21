@@ -90,56 +90,64 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>
-      Feel free to reach out to me via email at 
-      <a href="mailto:yntsalaze.yn@gmail.com">yntsalaze.yn@gmail.com</a> or connect with me on 
-      <a href="https://www.linkedin.com/in/yanga-ntsalaze-27b481191/" target="_blank">LinkedIn</a>.
-    </p>
+    <form action="https://formspree.io/f/mjkkndbl" method="POST">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
     <p>© 2025 Yanga. All rights reserved.</p>
+    <p>Feel free to reach out to me via email at <a href="mailto:yntsalaze.yn@gmail.com">yntsalaze.yn@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/yanga-ntsalaze-27b481191/" target="_blank">LinkedIn</a>.</p>
   </footer>
-</body>
-</html>
 
-<script>
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
-  });
 
-  // Back to top button functionality
-  const backToTop = document.createElement('div');
-  backToTop.textContent = '↑';
-  backToTop.style.cssText = `
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: #007acc;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none;
-  `;
-  document.body.appendChild(backToTop);
+    // Back to top button functionality
+    const backToTop = document.createElement('div');
+    backToTop.textContent = '↑';
+    backToTop.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: #007acc;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+    `;
+    document.body.appendChild(backToTop);
 
-  window.addEventListener('scroll', () => {
-    backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
-  });
+    window.addEventListener('scroll', () => {
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
 
-  backToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
