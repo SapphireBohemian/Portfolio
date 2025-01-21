@@ -87,7 +87,7 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <form id="contactForm" onsubmit="handleSubmit(event)">
+    <form id="contactForm" action="https://formsubmit.co/yntsalaze.yn@gmail.com" method="POST" onsubmit="handleSubmit(event)">
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" required>
       
@@ -154,12 +154,10 @@
       event.preventDefault();
       const formData = new FormData(event.target);
 
-      fetch('https://formspree.io/f/mjkkndbl', {
+      fetch('https://formsubmit.co/yntsalaze.yn@gmail.com', {
         method: 'POST',
         body: formData,
-        mode: 'no-cors',
       })
-
       .then(response => {
         if (response.ok) {
           document.getElementById('confirmationMessage').style.display = 'block';
